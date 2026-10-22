@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { ABOUT_KITCHEN, ABOUT_BAKER } from "@/data/images";
+import { ABOUT_CRAFT, ABOUT_CREATION } from "@/data/images";
 import { PipingDivider } from "@/components/PipingDivider";
 
 export const metadata: Metadata = {
@@ -9,9 +9,6 @@ export const metadata: Metadata = {
   description:
     "Learn about Goodness Delights Bakehouse — our story, our values, and the people behind every handmade cake.",
 };
-
-// NOTE: Replace ABOUT_KITCHEN and ABOUT_BAKER with real photos of your bakery
-// and team before launch.
 
 export default function AboutPage() {
   return (
@@ -23,10 +20,10 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-10 grid items-center gap-10 lg:grid-cols-2">
-        <div className="relative aspect-[4/3] overflow-hidden rounded-soft shadow-soft">
+        <div className="relative aspect-[4/5] overflow-hidden rounded-soft shadow-soft">
           <Image
-            src={ABOUT_KITCHEN}
-            alt="Goodness Delights' Cape Town bakery kitchen"
+            src={ABOUT_CRAFT}
+            alt="A three-tier ivory Goodness Delights wedding cake with gold accents"
             fill
             sizes="(min-width: 1024px) 560px, 90vw"
             className="object-cover"
@@ -67,8 +64,8 @@ export default function AboutPage() {
       <div className="mt-16 grid items-center gap-10 lg:grid-cols-2">
         <div className="relative order-2 aspect-square overflow-hidden rounded-soft shadow-soft lg:order-1">
           <Image
-            src={ABOUT_BAKER}
-            alt="Founder and head baker of Goodness Delights"
+            src={ABOUT_CREATION}
+            alt="A handcrafted white wedding cake with ruffles and gold initials"
             fill
             sizes="(min-width: 1024px) 480px, 90vw"
             className="object-cover"
@@ -101,3 +98,4 @@ export default function AboutPage() {
     </div>
   );
 }
+

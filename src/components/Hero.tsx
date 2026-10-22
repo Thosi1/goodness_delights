@@ -42,7 +42,7 @@ export function Hero() {
           <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-soft shadow-soft">
             <Image
               src={HERO}
-              alt="An elegant tiered celebration cake with floral decoration"
+              alt="A Goodness Delights white celebration cake with orchids, gold lettering and ruffles"
               fill
               priority
               sizes="(min-width: 1024px) 480px, 90vw"
@@ -54,3 +54,4 @@ export function Hero() {
     </section>
   );
 }
+
