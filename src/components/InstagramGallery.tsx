@@ -25,13 +25,13 @@ export function InstagramGallery() {
 
       <div id="kitchen-gallery" className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
         {photos.map(({ src, alt }) => (
-          <div key={src} className="group relative aspect-square overflow-hidden rounded-xl">
+          <div key={src} className="group relative aspect-[4/5] overflow-hidden rounded-xl">
             <Image
               src={src}
               alt={alt}
               fill
               sizes="(min-width: 1024px) 200px, (min-width: 640px) 30vw, 45vw"
-              className="object-cover transition-transform duration-500 group-hover:scale-110"
+              className="object-contain bg-cream-100"
             />
           </div>
         ))}

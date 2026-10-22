@@ -111,7 +111,7 @@ export function ImageUploader({ images, onChange }: Props) {
         <ul className="mt-4 grid grid-cols-3 gap-3 sm:grid-cols-5">
           {images.map((img) => (
             <li key={img.id} className="relative aspect-square overflow-hidden rounded-xl bg-blush-100">
-              <Image src={img.previewUrl} alt="Reference upload preview" fill sizes="120px" className="object-cover" />
+              <Image src={img.previewUrl} alt="Reference upload preview" fill sizes="120px" className="object-contain bg-cream-100" />
               <button
                 type="button"
                 aria-label="Remove image"
@@ -132,3 +132,4 @@ export function ImageUploader({ images, onChange }: Props) {
     </div>
   );
 }
+

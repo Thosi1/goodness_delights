@@ -51,7 +51,7 @@ export const GALLERY = [
   },
   {
     "src": "/images/goodness-delights/paw-patrol-tiered-cake.webp",
-    "alt": "A blue three-tier Paw Patrol birthday cake"
+    "alt": "A blue two-tier Paw Patrol birthday cake"
   },
   {
     "src": "/images/goodness-delights/traditional-pot-celebration-cake.webp",

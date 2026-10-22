@@ -33,13 +33,13 @@ export function ProductCard({ product }: { product: Product }) {
 
   return (
     <div className="group flex flex-col overflow-hidden rounded-soft bg-white shadow-card transition-transform duration-300 hover:-translate-y-1 hover:shadow-soft">
-      <Link href={`/shop/${product.slug}`} className="relative block aspect-square overflow-hidden bg-blush-100">
+      <Link href={`/shop/${product.slug}`} className="relative block aspect-[4/5] overflow-hidden bg-blush-100">
         <Image
           src={product.images[0]}
           alt={product.name}
           fill
           sizes="(min-width: 1024px) 25vw, 50vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-contain bg-cream-100"
         />
         {product.bestseller && (
           <span className="absolute left-3 top-3 rounded-full bg-gold-500 px-3 py-1 font-body text-[11px] font-semibold uppercase tracking-wide text-white">
@@ -96,3 +96,4 @@ export function ProductCard({ product }: { product: Product }) {
     </div>
   );
 }
+

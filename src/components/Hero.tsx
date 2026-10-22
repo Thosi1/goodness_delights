@@ -46,7 +46,7 @@ export function Hero() {
               fill
               priority
               sizes="(min-width: 1024px) 480px, 90vw"
-              className="object-cover"
+              className="object-contain bg-cream-100"
             />
           </div>
         </div>
