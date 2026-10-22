@@ -37,7 +37,7 @@ export function FeaturedCategories() {
                 alt={category}
                 fill
                 sizes="80px"
-                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                className="object-contain bg-cream-100"
               />
             </div>
             <span className="font-body text-sm font-medium text-brown-700 group-hover:text-gold-500">

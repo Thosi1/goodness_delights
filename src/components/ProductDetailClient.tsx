@@ -69,13 +69,13 @@ export function ProductDetailClient({
 
       <div className="mt-6 grid gap-10 lg:grid-cols-2">
         <div>
-          <div className="relative aspect-square overflow-hidden rounded-soft bg-blush-100">
+          <div className="relative aspect-[4/5] overflow-hidden rounded-soft bg-blush-100">
             <Image
               src={product.images[activeImage]}
               alt={`${product.name} — image ${activeImage + 1}`}
               fill
               sizes="(min-width: 1024px) 560px, 90vw"
-              className="object-cover"
+              className="object-contain bg-cream-100"
               priority
             />
           </div>
@@ -91,7 +91,7 @@ export function ProductDetailClient({
                     activeImage === i ? "ring-gold-500" : "ring-transparent"
                   }`}
                 >
-                  <Image src={img} alt="" fill sizes="64px" className="object-cover" />
+                  <Image src={img} alt="" fill sizes="64px" className="object-contain bg-cream-100" />
                 </button>
               ))}
             </div>
@@ -220,3 +220,4 @@ export function ProductDetailClient({
     </div>
   );
 }
+

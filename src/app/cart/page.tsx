@@ -38,7 +38,7 @@ export default function CartPage() {
           {items.map((line) => (
             <li key={line.cartItemId} className="flex gap-4 py-5">
               <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-xl bg-blush-100">
-                <Image src={line.image} alt={line.name} fill sizes="96px" className="object-cover" />
+                <Image src={line.image} alt={line.name} fill sizes="96px" className="object-contain bg-cream-100" />
               </div>
               <div className="flex flex-1 flex-col justify-between">
                 <div className="flex items-start justify-between gap-3">
@@ -152,3 +152,4 @@ export default function CartPage() {
     </div>
   );
 }
+

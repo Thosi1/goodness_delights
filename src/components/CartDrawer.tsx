@@ -52,7 +52,7 @@ export function CartDrawer() {
                 {items.map((line) => (
                   <li key={line.cartItemId} className="flex gap-4">
                     <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl bg-blush-100">
-                      <Image src={line.image} alt={line.name} fill sizes="80px" className="object-cover" />
+                      <Image src={line.image} alt={line.name} fill sizes="80px" className="object-contain bg-cream-100" />
                     </div>
                     <div className="flex-1">
                       <div className="flex items-start justify-between gap-2">
@@ -135,3 +135,4 @@ export function CartDrawer() {
     </div>
   );
 }
+

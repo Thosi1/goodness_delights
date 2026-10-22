@@ -12,7 +12,7 @@ export function OurStory() {
             alt="A handcrafted Goodness Delights cake with white flowers and gold accents"
             fill
             sizes="(min-width: 1024px) 560px, 90vw"
-            className="object-cover"
+            className="object-contain bg-cream-100"
           />
         </div>
         <div className="lg:order-1">

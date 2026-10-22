@@ -26,7 +26,7 @@ export default function AboutPage() {
             alt="A three-tier ivory Goodness Delights wedding cake with gold accents"
             fill
             sizes="(min-width: 1024px) 560px, 90vw"
-            className="object-cover"
+            className="object-contain bg-cream-100"
           />
         </div>
         <p className="font-body text-base leading-relaxed text-brown-600">
@@ -62,13 +62,13 @@ export default function AboutPage() {
       </div>
 
       <div className="mt-16 grid items-center gap-10 lg:grid-cols-2">
-        <div className="relative order-2 aspect-square overflow-hidden rounded-soft shadow-soft lg:order-1">
+        <div className="relative order-2 aspect-[4/5] overflow-hidden rounded-soft shadow-soft lg:order-1">
           <Image
             src={ABOUT_CREATION}
             alt="A handcrafted white wedding cake with ruffles and gold initials"
             fill
             sizes="(min-width: 1024px) 480px, 90vw"
-            className="object-cover"
+            className="object-contain bg-cream-100"
           />
         </div>
         <div className="order-1 lg:order-2">
