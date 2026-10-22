@@ -1,8 +1,7 @@
 import { Product } from "@/types";
 import {
   CAKE_ROSE, CAKE_CHOC, CUPCAKE_VANILLA, BROWNIE, COOKIE,
-  PASTRY, CUPCAKE_VEGAN, CAKE_LEMON, CAKE_REDVELVET,
-  GIFT_BOX, COOKIE_CHOC, DANISH,
+  CUPCAKE_VEGAN, CAKE_LEMON, CAKE_REDVELVET, COOKIE_CHOC,
 } from "./images";
 
 // NOTE: Replace with real product database / CMS queries when connecting a backend.
@@ -119,25 +118,6 @@ export const products: Product[] = [
     allergenInfo: "Contains gluten, dairy and eggs.",
   },
   {
-    id: "p6",
-    slug: "almond-croissant",
-    name: "Almond Croissant",
-    category: "Pastries",
-    price: 38,
-    shortDescription: "Buttery layers filled with almond cream.",
-    description:
-      "Flaky, all-butter croissant dough filled and topped with rich almond cream, finished with toasted almond flakes and a dusting of icing sugar.",
-    images: PASTRY,
-    dietary: ["vegetarian"],
-    flavours: ["Almond"],
-    sizes: [{ label: "Single" }, { label: "Box of 4", priceModifier: 110 }],
-    leadTimeHours: 12,
-    inStock: true,
-    popularity: 76,
-    storageGuidance: "Best enjoyed fresh on the day of collection.",
-    allergenInfo: "Contains gluten, dairy, eggs and almonds.",
-  },
-  {
     id: "p7",
     slug: "vegan-chocolate-cupcake-box",
     name: "Vegan Chocolate Cupcake Box",
@@ -202,26 +182,6 @@ export const products: Product[] = [
     allergenInfo: "Contains gluten, dairy and eggs.",
   },
   {
-    id: "p10",
-    slug: "pistachio-rose-gift-box",
-    name: "Pistachio & Rose Gift Box",
-    category: "Gift Boxes",
-    price: 295,
-    shortDescription: "An assortment of pistachio and rose treats, gift-wrapped.",
-    description:
-      "A curated assortment of pistachio financiers, rose macarons and rose shortbread, beautifully boxed and ribboned — ready to gift.",
-    images: GIFT_BOX,
-    dietary: ["vegetarian"],
-    flavours: ["Pistachio", "Rose"],
-    sizes: [{ label: "Small Box" }, { label: "Large Box", priceModifier: 180 }],
-    leadTimeHours: 48,
-    inStock: true,
-    isNew: true,
-    popularity: 77,
-    storageGuidance: "Store in a cool, dry place. Best enjoyed within 5 days.",
-    allergenInfo: "Contains gluten, dairy, eggs and pistachios.",
-  },
-  {
     id: "p11",
     slug: "double-chocolate-chunk-cookie-box",
     name: "Double Chocolate Chunk Cookie Box",
@@ -241,25 +201,6 @@ export const products: Product[] = [
     storageGuidance: "Store in an airtight container for up to 5 days.",
     allergenInfo: "Contains gluten, dairy and eggs.",
   },
-  {
-    id: "p12",
-    slug: "fruit-danish-box",
-    name: "Seasonal Fruit Danish Box",
-    category: "Pastries",
-    price: 165,
-    shortDescription: "Flaky danishes topped with seasonal fruit and glaze.",
-    description:
-      "Buttery, laminated pastry topped with vanilla custard and a rotating selection of seasonal fruit, finished with a light apricot glaze.",
-    images: DANISH,
-    dietary: ["vegetarian"],
-    flavours: ["Seasonal Fruit"],
-    sizes: [{ label: "Box of 4" }],
-    leadTimeHours: 24,
-    inStock: false,
-    popularity: 60,
-    storageGuidance: "Best enjoyed fresh on the day of collection.",
-    allergenInfo: "Contains gluten, dairy and eggs.",
-  },
 ];
 
 export const categories = [
@@ -267,8 +208,6 @@ export const categories = [
   "Cupcakes",
   "Cookies",
   "Brownies",
-  "Pastries",
-  "Gift Boxes",
 ] as const;
 
 export function getProductBySlug(slug: string) {
@@ -280,3 +219,4 @@ export function getRelatedProducts(product: Product, count = 4) {
     .filter((p) => p.category === product.category && p.id !== product.id)
     .slice(0, count);
 }
+

@@ -9,9 +9,7 @@ export type ProductCategory =
   | "Celebration Cakes"
   | "Cupcakes"
   | "Cookies"
-  | "Brownies"
-  | "Pastries"
-  | "Gift Boxes";
+  | "Brownies";
 
 export interface ProductOption {
   label: string;
@@ -65,3 +63,4 @@ export interface FAQItem {
   question: string;
   answer: string;
 }
+

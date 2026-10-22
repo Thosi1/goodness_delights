@@ -69,7 +69,7 @@ export function ShopClient() {
       <div className="text-center">
         <h1 className="font-display text-4xl text-brown-800">Shop Our Treats</h1>
         <p className="mx-auto mt-2 max-w-xl font-body text-brown-600">
-          Freshly baked celebration cakes, cupcakes, cookies, brownies, pastries and gift boxes — every order made by hand.
+          Freshly baked celebration cakes, cupcakes, cookies and brownies — every order made by hand.
         </p>
       </div>
 
@@ -170,3 +170,4 @@ export function ShopClient() {
     </div>
   );
 }
+

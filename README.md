@@ -6,7 +6,7 @@ Lucide icons.
 
 ## What's included
 
-- **Home page** — hero, featured categories, bestsellers, custom cake promo,
+- **Home page** — hero, featured categories, custom cake promo,
   our story, testimonials, Instagram-style gallery, newsletter signup
 - **Shop page** — search, category filter, sorting, dietary labels
 - **Product detail page** — gallery, flavour/size options, personalised
@@ -21,7 +21,7 @@ Lucide icons.
 - **About & Contact pages** — story, values, founder profile, contact form,
   map placeholder, FAQ accordion
 - Accessible semantic HTML, labelled forms, visible focus states, alt text
-- Mock product data for 12 products across all 6 categories
+- Mock product data for 9 products across all 4 categories
 
 ## Getting started
 
@@ -101,3 +101,4 @@ No API keys or credentials are hard-coded anywhere in this project.
 - React Hook Form + Zod for form validation
 - Lucide React icons
 - Local mock data, no external backend required to run
+
