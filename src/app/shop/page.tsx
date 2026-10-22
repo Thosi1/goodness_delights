@@ -5,7 +5,7 @@ import { ShopClient } from "@/components/ShopClient";
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "Browse celebration cakes, cupcakes, cookies, brownies, pastries and gift boxes. Filter by category, dietary needs and more.",
+    "Browse celebration cakes, cupcakes, cookies and brownies. Filter by category, dietary needs and more.",
 };
 
 export default function ShopPage() {
@@ -15,3 +15,4 @@ export default function ShopPage() {
     </Suspense>
   );
 }
+

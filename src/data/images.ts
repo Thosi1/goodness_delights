@@ -41,12 +41,6 @@ export const CAT_COOKIES = u("photo-1558961363-fa8fdf82db35");
 /** Brownies — Michelle Tsang fudge brownies */
 export const CAT_BROWNIES = u("photo-1515037893149-de7f840978e2");
 
-/** Pastries — Mae Mu croissant */
-export const CAT_PASTRIES = u("photo-1555507036-ab1f4038808a");
-
-/** Gift Boxes — Brigitte Tohm macaron gift box */
-export const CAT_GIFT_BOXES = u("photo-1491821893533-80f535044695");
-
 // ─── Gallery strip ────────────────────────────────────────────────────────────
 
 export const GALLERY = [
@@ -92,11 +86,6 @@ export const COOKIE = [
   u("photo-1499636136210-6f4ee915583e"),
 ];
 
-/** Almond Croissant */
-export const PASTRY = [
-  u("photo-1555507036-ab1f4038808a"),
-  u("photo-1509440159596-0249088772ff"),
-];
 
 /** Vegan Chocolate Cupcakes */
 export const CUPCAKE_VEGAN = [
@@ -116,20 +105,9 @@ export const CAKE_REDVELVET = [
   u("photo-1464349095431-e9a21285b5f3"),
 ];
 
-/** Pistachio & Rose Gift Box */
-export const GIFT_BOX = [
-  u("photo-1491821893533-80f535044695"),
-  u("photo-1570476922354-81227cdbb76c"),
-];
 
 /** Double Chocolate Chunk Cookies */
 export const COOKIE_CHOC = [
   u("photo-1499636136210-6f4ee915583e"),
   u("photo-1558961363-fa8fdf82db35"),
-];
-
-/** Seasonal Fruit Danish */
-export const DANISH = [
-  u("photo-1509440159596-0249088772ff"),
-  u("photo-1555507036-ab1f4038808a"),
 ];

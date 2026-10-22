@@ -3,7 +3,7 @@ import Link from "next/link";
 import { categories } from "@/data/products";
 import {
   CAT_CAKES, CAT_CUPCAKES, CAT_COOKIES,
-  CAT_BROWNIES, CAT_PASTRIES, CAT_GIFT_BOXES,
+  CAT_BROWNIES,
 } from "@/data/images";
 import { PipingDivider } from "./PipingDivider";
 
@@ -12,8 +12,6 @@ const CATEGORY_IMAGES: Record<string, string> = {
   Cupcakes: CAT_CUPCAKES,
   Cookies: CAT_COOKIES,
   Brownies: CAT_BROWNIES,
-  Pastries: CAT_PASTRIES,
-  "Gift Boxes": CAT_GIFT_BOXES,
 };
 
 export function FeaturedCategories() {
@@ -26,7 +24,7 @@ export function FeaturedCategories() {
         </p>
       </div>
 
-      <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+      <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-4">
         {categories.map((category) => (
           <Link
             key={category}
@@ -51,3 +49,4 @@ export function FeaturedCategories() {
     </section>
   );
 }
+
