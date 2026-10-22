@@ -25,10 +25,10 @@ export function CustomCakePromo() {
             Start Your Custom Cake Request
           </Link>
         </div>
-        <div className="relative mx-auto aspect-[4/3] w-full max-w-md overflow-hidden rounded-soft shadow-soft">
+        <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-soft shadow-soft">
           <Image
             src={CUSTOM_CAKE_PROMO}
-            alt="A beautifully designed custom multi-tier celebration cake"
+            alt="A Goodness Delights pastel unicorn cake with rainbow decorations"
             fill
             sizes="(min-width: 1024px) 480px, 90vw"
             className="object-cover"
@@ -38,3 +38,4 @@ export function CustomCakePromo() {
     </section>
   );
 }
+

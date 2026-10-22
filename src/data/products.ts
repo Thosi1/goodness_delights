@@ -5,8 +5,8 @@ import {
 } from "./images";
 
 // NOTE: Replace with real product database / CMS queries when connecting a backend.
-// Image URLs are real Unsplash photos (free license). Replace with professional
-// product photography before launch.
+// Photos combine bakery-supplied design examples with stock images for recipes
+// that have not yet been matched to a supplied photograph.
 
 export const products: Product[] = [
   {

@@ -6,10 +6,10 @@ export function OurStory() {
   return (
     <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
       <div className="grid items-center gap-10 lg:grid-cols-2">
-        <div className="relative mx-auto aspect-[5/4] w-full max-w-lg overflow-hidden rounded-soft shadow-soft lg:order-2">
+        <div className="relative mx-auto aspect-[4/5] w-full max-w-lg overflow-hidden rounded-soft shadow-soft lg:order-2">
           <Image
             src={OUR_STORY}
-            alt="The Goodness Delights baker decorating a cake by hand in the kitchen"
+            alt="A handcrafted Goodness Delights cake with white flowers and gold accents"
             fill
             sizes="(min-width: 1024px) 560px, 90vw"
             className="object-cover"
@@ -40,3 +40,4 @@ export function OurStory() {
     </section>
   );
 }
+

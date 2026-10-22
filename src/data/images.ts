@@ -1,112 +1,165 @@
-/**
- * Real Unsplash photo URLs for Goodness Delights Bakehouse.
- * All images are free under the Unsplash License (unsplash.com/license).
- * Photographers are credited in comments — attribution is appreciated though not required.
- *
- * NOTE: Replace these with your own professional product photography before launch.
- * Update next.config.js remotePatterns if you host images elsewhere.
- */
+/** Bakery-supplied photography, optimised and hosted locally as WebP files. */
+const photo = (name: string) => `/images/goodness-delights/${name}.webp`;
 
-const u = (id: string, w = 900, h = 900) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&h=${h}&q=80`;
+// Stock images remain for sample recipes without a confirmed matching photo.
+const u = (id: string) =>
+  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=900&h=900&q=80`;
 
-// ─── Site-wide / pages ────────────────────────────────────────────────────────
-
-/** Hero — elegant tiered cake with flowers. Photo: Jason Leung */
-export const HERO = u("photo-1464349095431-e9a21285b5f3", 900, 1100);
-
-/** Custom cake promo — naked drip cake. Photo: Thomas William */
-export const CUSTOM_CAKE_PROMO = u("photo-1535141192574-5f8a8b5e5b5e", 800, 600);
-
-/** Our Story — baker decorating. Photo: Brooke Lark */
-export const OUR_STORY = u("photo-1556909114-f6e7ad7d3136", 800, 640);
-
-/** About — kitchen scene. Photo: theme_photos */
-export const ABOUT_KITCHEN = u("photo-1556909114-f6e7ad7d3136", 800, 600);
-
-/** About — founder portrait placeholder. Photo: The Creative Exchange */
-export const ABOUT_BAKER = u("photo-1556909114-f6e7ad7d3136", 700, 700);
-
-// ─── Category thumbnails ──────────────────────────────────────────────────────
-
-/** Celebration Cakes — Jason Leung white tiered cake */
-export const CAT_CAKES = u("photo-1464349095431-e9a21285b5f3");
-
-/** Cupcakes — Persnickety Prints retro cupcakes */
-export const CAT_CUPCAKES = u("photo-1551500693-f3e9e7842948");
-
-/** Cookies — Kari Shea sugar cookies */
-export const CAT_COOKIES = u("photo-1558961363-fa8fdf82db35");
-
-/** Brownies — Michelle Tsang fudge brownies */
+export const HERO = photo("white-orchid-celebration-cake");
+export const CUSTOM_CAKE_PROMO = photo("unicorn-rainbow-cake");
+export const OUR_STORY = photo("white-and-gold-floral-cake");
+export const ABOUT_CRAFT = photo("ivory-and-gold-wedding-cake");
+export const ABOUT_CREATION = photo("white-ruffle-wedding-cake");
+export const CAT_CAKES = photo("white-and-gold-floral-cake");
+export const CAT_CUPCAKES = photo("pastel-cupcake-box");
+export const CAT_COOKIES = photo("decorated-birthday-biscuits");
 export const CAT_BROWNIES = u("photo-1515037893149-de7f840978e2");
 
-// ─── Gallery strip ────────────────────────────────────────────────────────────
-
+/** Alt text stays beside its image so changes in gallery order remain accessible. */
 export const GALLERY = [
-  u("photo-1534534622665-065d8ce6f9cc"), // Ella Olsson — chocolate cake
-  u("photo-1551500693-f3e9e7842948"),     // Persnickety Prints — cupcakes
-  u("photo-1515037893149-de7f840978e2"), // Michelle Tsang — brownies
-  u("photo-1491821893533-80f535044695"), // Brigitte Tohm — macaron box
-  u("photo-1570476922354-81227cdbb76c"), // Melanie Kreutz — colourful macarons
-  u("photo-1558961363-fa8fdf82db35"),    // Kari Shea — sugar cookies
+  {
+    "src": "/images/goodness-delights/white-orchid-celebration-cake.webp",
+    "alt": "A white celebration cake with orchids, gold lettering and ruffles"
+  },
+  {
+    "src": "/images/goodness-delights/unicorn-rainbow-cake.webp",
+    "alt": "A pastel unicorn cake with a rainbow decoration"
+  },
+  {
+    "src": "/images/goodness-delights/pastel-cupcake-box.webp",
+    "alt": "Pastel pink and blue cupcakes with colourful toppers"
+  },
+  {
+    "src": "/images/goodness-delights/white-and-gold-floral-cake.webp",
+    "alt": "A white birthday cake with gold accents, flowers and a butterfly"
+  },
+  {
+    "src": "/images/goodness-delights/decorated-birthday-biscuits.webp",
+    "alt": "Colourfully decorated birthday biscuits in a presentation box"
+  },
+  {
+    "src": "/images/goodness-delights/teddy-balloon-baby-shower-cake.webp",
+    "alt": "A teddy bear baby shower cake with a blue hot-air balloon"
+  },
+  {
+    "src": "/images/goodness-delights/ivory-and-gold-wedding-cake.webp",
+    "alt": "A three-tier ivory wedding cake with gold accents"
+  },
+  {
+    "src": "/images/goodness-delights/white-ruffle-wedding-cake.webp",
+    "alt": "A white two-tier wedding cake with ruffles and gold initials"
+  },
+  {
+    "src": "/images/goodness-delights/paw-patrol-tiered-cake.webp",
+    "alt": "A blue three-tier Paw Patrol birthday cake"
+  },
+  {
+    "src": "/images/goodness-delights/traditional-pot-celebration-cake.webp",
+    "alt": "A two-tier celebration cake with a traditional pot topper"
+  },
+  {
+    "src": "/images/goodness-delights/black-and-gold-birthday-cake.webp",
+    "alt": "A black and white birthday cake with a gold number 40"
+  },
+  {
+    "src": "/images/goodness-delights/pink-barbie-birthday-cake.webp",
+    "alt": "A pink Barbie birthday cake with a silver number four"
+  },
+  {
+    "src": "/images/goodness-delights/dinosaur-birthday-cake.webp",
+    "alt": "A dinosaur birthday cake with a large number four"
+  },
+  {
+    "src": "/images/goodness-delights/pink-character-bento-cake-set.webp",
+    "alt": "A pink Hello Kitty bento cake with matching cupcakes"
+  },
+  {
+    "src": "/images/goodness-delights/colourful-bento-cake-set.webp",
+    "alt": "A colourful bento birthday cake with matching cupcakes"
+  },
+  {
+    "src": "/images/goodness-delights/rainbow-teddy-cake.webp",
+    "alt": "A yellow and pink teddy bear cake with a rainbow"
+  },
+  {
+    "src": "/images/goodness-delights/red-themed-cupcake-box.webp",
+    "alt": "A box of red birthday cupcakes with character toppers"
+  },
+  {
+    "src": "/images/goodness-delights/blue-character-birthday-cake.webp",
+    "alt": "A blue character birthday cake with colourful decorations"
+  },
+  {
+    "src": "/images/goodness-delights/barbie-celebration-cake.webp",
+    "alt": "A pink Barbie celebration cake with a rainbow and decorations"
+  },
+  {
+    "src": "/images/goodness-delights/themed-cupcake-box.webp",
+    "alt": "A box of cupcakes with colourful character toppers"
+  },
+  {
+    "src": "/images/goodness-delights/biscuit-assortment.webp",
+    "alt": "An assortment of biscuits packed in white trays"
+  },
+  {
+    "src": "/images/goodness-delights/scones-and-biscuits.webp",
+    "alt": "Golden scones with an assortment of biscuits"
+  },
+  {
+    "src": "/images/goodness-delights/scones-in-blue-bowls.webp",
+    "alt": "Fresh scones in two blue bowls"
+  },
+  {
+    "src": "/images/goodness-delights/fresh-scones.webp",
+    "alt": "Two bowls of golden freshly baked scones"
+  },
+  {
+    "src": "/images/goodness-delights/freshly-baked-scones.webp",
+    "alt": "Rows of golden freshly baked scones cooling on a tray"
+  }
 ];
 
-// ─── Products ────────────────────────────────────────────────────────────────
-
-/** Blush Rose Celebration Cake */
 export const CAKE_ROSE = [
-  u("photo-1464349095431-e9a21285b5f3"),
-  u("photo-1535141192574-5f8a8b5e5b5e"),
-  u("photo-1578985545062-69928b1d9587"),
+  photo("white-and-gold-floral-cake"),
+  photo("white-orchid-celebration-cake"),
 ];
 
-/** Gilded Chocolate Drip Cake */
+export const CUPCAKE_VANILLA = [
+  photo("pastel-cupcake-box"),
+  photo("themed-cupcake-box"),
+  photo("red-themed-cupcake-box"),
+];
+
+export const COOKIE = [
+  photo("decorated-birthday-biscuits"),
+];
+
 export const CAKE_CHOC = [
   u("photo-1534534622665-065d8ce6f9cc"),
   u("photo-1578985545062-69928b1d9587"),
   u("photo-1588195538326-c5b1e9f80a1b"),
 ];
 
-/** Vanilla Bean Cupcakes */
-export const CUPCAKE_VANILLA = [
-  u("photo-1551500693-f3e9e7842948"),
-  u("photo-1488477181946-6428a0291777"),
-];
-
-/** Salted Caramel Brownie Box */
 export const BROWNIE = [
   u("photo-1515037893149-de7f840978e2"),
   u("photo-1606313564200-e75d5e30476c"),
 ];
 
-/** Iced Gem Cookie Box */
-export const COOKIE = [
-  u("photo-1558961363-fa8fdf82db35"),
-  u("photo-1499636136210-6f4ee915583e"),
-];
-
-
-/** Vegan Chocolate Cupcakes */
 export const CUPCAKE_VEGAN = [
   u("photo-1488477181946-6428a0291777"),
   u("photo-1551500693-f3e9e7842948"),
 ];
 
-/** Gluten-Free Lemon Drizzle Cake */
 export const CAKE_LEMON = [
   u("photo-1578985545062-69928b1d9587"),
   u("photo-1535141192574-5f8a8b5e5b5e"),
 ];
 
-/** Halal Red Velvet Cake */
 export const CAKE_REDVELVET = [
   u("photo-1535141192574-5f8a8b5e5b5e"),
   u("photo-1464349095431-e9a21285b5f3"),
 ];
 
-
-/** Double Chocolate Chunk Cookies */
 export const COOKIE_CHOC = [
   u("photo-1499636136210-6f4ee915583e"),
   u("photo-1558961363-fa8fdf82db35"),

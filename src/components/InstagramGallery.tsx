@@ -1,18 +1,15 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import { Instagram } from "lucide-react";
 import { GALLERY } from "@/data/images";
 import { PipingDivider } from "./PipingDivider";
 
-const ALT_TEXTS = [
-  "A sliced chocolate cake with flakes on a plate",
-  "Retro cupcakes with pastel frosting swirls",
-  "Freshly baked fudgy brownies on parchment",
-  "French macarons in a white gift box",
-  "Assorted colourful French macarons from Paris",
-  "Hand-iced sugar cookies in pastel tones",
-];
-
 export function InstagramGallery() {
+  const [expanded, setExpanded] = useState(false);
+  const photos = expanded ? GALLERY : GALLERY.slice(0, 6);
+
   return (
     <section className="mx-auto max-w-7xl px-5 py-16 sm:px-8">
       <div className="text-center">
@@ -26,19 +23,31 @@ export function InstagramGallery() {
         </a>
       </div>
 
-      <div className="mt-8 grid grid-cols-3 gap-3 sm:grid-cols-6">
-        {GALLERY.map((src, i) => (
+      <div id="kitchen-gallery" className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+        {photos.map(({ src, alt }) => (
           <div key={src} className="group relative aspect-square overflow-hidden rounded-xl">
             <Image
               src={src}
-              alt={ALT_TEXTS[i]}
+              alt={alt}
               fill
-              sizes="200px"
+              sizes="(min-width: 1024px) 200px, (min-width: 640px) 30vw, 45vw"
               className="object-cover transition-transform duration-500 group-hover:scale-110"
             />
           </div>
         ))}
       </div>
+      <div className="mt-6 text-center">
+        <button
+          type="button"
+          aria-expanded={expanded}
+          aria-controls="kitchen-gallery"
+          onClick={() => setExpanded((value) => !value)}
+          className="rounded-full border border-brown-700 px-6 py-3 font-body text-sm font-semibold text-brown-700 transition-colors hover:bg-brown-700 hover:text-white"
+        >
+          {expanded ? "Show fewer photos" : `View all ${GALLERY.length} photos`}
+        </button>
+      </div>
     </section>
   );
 }
+
